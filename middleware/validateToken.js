@@ -9,7 +9,7 @@ function validateToken(req, res, next){
         return res.status( 401 ).end();
     }
 
-    if( token !== `Bearer ${TOKEN}`){
+    if( token !== `Bearer ${API_TOKEN}`){
         res.statusMessage = "The 'authorization' TOKEN is invalid.";
         return res.status( 401 ).end();
     }
