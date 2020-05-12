@@ -1,4 +1,4 @@
-
+const {API_TOKEN} = require('../config');
 
 function validateToken(req, res, next){
 
