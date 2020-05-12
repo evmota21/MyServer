@@ -1,4 +1,4 @@
-const {API_TOKEN} = require('../config');
+const {TOKEN} = require('../config');
 
 function validateToken(req, res, next){
 
@@ -9,7 +9,7 @@ function validateToken(req, res, next){
         return res.status( 401 ).end();
     }
 
-    if( token !== `Bearer ${API_TOKEN}`){
+    if( token !== `Bearer ${TOKEN}`){
         res.statusMessage = "The 'authorization' TOKEN is invalid.";
         return res.status( 401 ).end();
     }
